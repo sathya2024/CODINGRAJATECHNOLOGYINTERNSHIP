@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Generator</title>
+    <style>
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:#3f9975;
+            color: #333;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: auto;
+            background-size: cover;
+            background-position: center;
+        }
+
+
+        header {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 4px solid #0f9d58;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color:lightcyan;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 10px;
+           text-align:justify;
+        }
+
+        h1{
+            font-size:50px;
+        }
+        h2{
+            font-size:30px;
+        }
+        h3{
+            font-size:25px;
+        }
+        .template-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .template {
+            width: 45%;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .template:hover {
+                transform: scale(1.05);
+            }
+
+            .template img {
+                width: 100%;
+                height: 500px;
+                border-bottom: 1px solid #ddd;
+                border-radius: 10px 10px 0 0;
+            }
+
+        .template-info {
+            padding: 15px;
+        }
+
+        .template p {
+            margin: 5px 0;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 15px;
+            background-color: #4285f4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+            button:hover {
+                background-color: #0f9d58;
+            }
+
+        .caption {
+            margin-top: 20px;
+            text-align: center;
+            font-style: italic;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome To InfoCraftCV</h1>
+        <p><h3>Edit the already crafted and tailored templates to your requirement!</h3></p>
+    </header>
+
+    <main>
+        <center><u> <b> <p> <h2>Select a template below: </h2></p></b></u></center>
+       
+        <div class="template-container">
+            <div class="template">
+                <img src="ph1.jpg" alt="Template 1">
+                <div class="template-info">
+                    <center><h3> <b>Minimalist Modern Editable Templates</b></h3></center>
+                    <p>Sleek and modern, this template embraces simplicity, using a clean design with ample white space to create a professional and contemporary look.</p>
+                    <button onclick="redirectToTemplate('design2.html')">Try Now</button>
+                </div>
+            </div>
+
+            <div class="template">
+                <img src="ph2.jpg" alt="Template 2">
+                <div class="template-info">
+                    <center><h3><b>Creative Portfolio</b></h3></center>
+                    <p>Designed for individuals in artistic fields,this template incorporates unique visuals, creative layouts, and showcases a portfolio-style presentation to highlight creative accomplishments.</p>
+                    <button onclick="redirectToTemplate('design1.html')">Try Now</button>
+                </div>
+            </div>
+
+            <div class="template">
+                <img src="ph3.jpg" alt="Template 3">
+                <div class="template-info">
+                    <center><h3><b>Classic Elegance</b></h3></center>
+                    <p>A timeless template featuring clean lines, professional fonts, and a traditional layout, perfect for showcasing a polished and sophisticated professional history.</p>
+                    <button onclick="redirectToTemplate('design3.html')">Try Now</button>
+                </div>
+            </div>
+
+            <div class="template">
+                <img src="ph4.jpg" alt="Template 4">
+                <div class="template-info">
+                    <center><h3><b>Tech Innovator</b></h3></center>
+                    <p>Geared towards tech professionals, this template employs a modern, tech-inspired aesthetic, with clean lines, bold headers, and a focus on showcasing technical skills and achievements.</p>
+                    <button onclick="redirectToTemplate('design4.html')">Try Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="caption">
+            <p>Choose a template that suits your style and start building your resume today!</p>
+        </div>
+    </main>
+
+    <script>
+        function redirectToTemplate(template) {
+            window.location.href = template;
+        }
+      </script>
+
+</body>
+</html>

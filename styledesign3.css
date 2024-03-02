@@ -1,0 +1,154 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppings', sans-serif;
+}
+
+body {
+    background: gray;
+}
+
+.container {
+    background: #000000;
+    max-width: 800px;
+    margin: 60px auto;
+    height: auto;
+    padding: 20px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    color:#fff;
+}
+
+.header {
+    text-align: center;
+}
+
+    .header h1 {
+        margin-bottom: 10px;
+    }
+
+    .header h3 {
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+.img-area {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 15px auto;
+    border: 10px groove #ffa500;
+}
+
+    .img-area img {
+        width: 100%;
+    }
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left {
+    flex: 1;
+    padding: 30px;
+}
+
+    .left p {
+        line-height: 1.5;
+    }
+
+    .left ul li {
+        line-height: 1.5;
+    }
+
+h2 {
+    background: #ffa500;
+    padding: 15px;
+    color: #fff;
+    margin: 30px 0;
+    font-size: 20px;
+    border-radius: 0 50px 50px 0;
+}
+
+.right {
+    flex: 1;
+    padding: 30px;
+    text-align:justify;
+}
+
+    .right h3 {
+        margin-bottom: 15px;
+    }
+
+    .right p {
+        line-height: 1.87;
+    }
+
+    .right ul li {
+        line-height: 1.25;
+        
+    }
+
+button {
+    font-size: 25px;
+    padding: 10px 20px;
+    margin: 0 0 0px 1000px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    color: #000000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    cursor: pointer;
+    transition: .5s;
+}
+
+   
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .container * {
+        visibility: visible;
+    }
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 95%;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        flex: none;
+        width: 100%;
+    }
+
+    .container {
+        width: 95%;
+        height: auto;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+}

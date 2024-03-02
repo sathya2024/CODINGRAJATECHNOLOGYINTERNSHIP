@@ -1,0 +1,574 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styledesign2.css">
+    <style>
+
+        @media print {
+            .editable, button, .toggle-preview, .exit-preview {
+                display: none !important;
+            }
+        }
+
+        body.preview-mode {
+            background-color: transparent;
+        }
+
+        .container {
+            background-color: transparent;
+        }
+        body.preview-mode {
+            background-color: transparent;
+        }
+
+        .container {
+            background-color: transparent;
+        }
+        .editable {
+            cursor: pointer;
+            border-bottom: none;
+            display: inline-block;
+        }
+
+            .editable:hover {
+                background-color: #a9ac43;
+            }
+
+            .editable:focus {
+                outline: none;
+                background-color: #a9ac43;
+            }
+
+        .imgBx {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+            .imgBx img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        .img-edit {
+            margin-top: 10px;
+        }
+
+        .contactInfo.language .percent,
+        .about.skills .percent {
+            position: relative;
+            width: 100%;
+            height: 6px;
+            background: #081921;
+            display: block;
+            margin-top: 5px;
+        }
+
+            .contactInfo.language .percent div,
+            .about.skills .percent div {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                background: #03a9f4;
+            }
+
+
+
+        #uploadImage {
+            display: none;
+        }
+
+        #imagePreview {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+            cursor: pointer;
+            transition: .5s;
+            user-select: none;
+        }
+
+        
+        body.preview-mode button.toggle-preview,
+        body.preview-mode button.exit-preview,
+        body.preview-mode button,
+        body.preview-mode button[onclick^="addContent"],
+        body.preview-mode button[onclick^="deleteContent"] {
+            display: none;
+        }
+        
+
+        body.preview-mode .print-area {
+            width: 100%;
+            margin: 0;
+        }
+
+        body.preview-mode .left-area {
+            display: 30%;
+        }
+
+        body.preview-mode .right-area {
+            width: 70%;
+        }
+
+        body.preview-mode button.toggle-preview {
+            display: none;
+        }
+
+        body.preview-mode button.exit-preview {
+            display: block;
+        }
+
+        
+        
+
+        [contenteditable="true"] {
+            border: none;
+            padding: 5px;
+            min-height: 20px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+
+        <div class="left_side">
+            <div class="profileText">
+
+               
+                <div class="imgBx">
+                    
+                    <input type="file" id="imageInput" accept="image/*" onchange="previewImage(event)">
+                   
+                    <img id="imagePreview" onclick="document.getElementById('imageInput').click()">
+
+                </div>
+                <br />
+                <h2 class="editable" contenteditable="true" spellcheck="false">Ramesh Kumar<br /><span class="editable" contenteditable="true" spellcheck="false">Web Developer</span></h2>
+            </div>
+            <div class="contactInfo">
+                <h3 class="title editable" contenteditable="true" spellcheck="false">Contact Info</h3>
+                <ul>
+                    <li>
+                        <span class="icon editable" contenteditable="true" spellcheck="false"><i class='bx bxs-phone-call'></i></span>
+                        <span class="text editable" contenteditable="true" spellcheck="false">+1 234 5678 9000</span>
+                    </li>
+                    <li>
+                        <span class="icon editable" contenteditable="true" spellcheck="false"><i class='bx bxs-envelope'></i></span>
+                        <span class="text editable" contenteditable="true" spellcheck="false">ramesh@email.com</span>
+                    </li>
+                    <li>
+                        <span class="icon editable" contenteditable="true" spellcheck="false"><i class='bx bx-globe'></i></span>
+                        <span class="text editable" contenteditable="true" spellcheck="false">www.kumar.com</span>
+                    </li>
+                    <li>
+                        <span class="icon editable" contenteditable="true" spellcheck="false"><i class='bx bxl-linkedin'></i></span>
+                        <span class="text editable" contenteditable="true" spellcheck="false">www.kumar@linkedin.com</span>
+                    </li>
+                    <li>
+                        <span class="icon editable" contenteditable="true" spellcheck="false"><i class='bx bxs-map'></i></span>
+                        <span class="text editable" contenteditable="true" spellcheck="false">Bangalore, India</span>
+                    </li>
+                </ul>
+            </div>
+            <button onclick="addContent('.contactInfo ul')">Add Contact</button>
+            <button onclick="deleteContent('.contactInfo ul')">Delete Contact</button>
+
+            <div class="contactInfo education">
+                <h3 class="title editable" contenteditable="true" spellcheck="false">Education</h3>
+                <ul>
+                    <li>
+                        <h5 class="editable" contenteditable="true" spellcheck="false">2010-2013</h5>
+                        <h4 class="editable" contenteditable="true" spellcheck="false">Master Degree in Computer Science</h4>
+                        <h4 class="editable" contenteditable="true" spellcheck="false">Oxford University </h4>
+                    </li>
+                    <li>
+                        <h5 class="editable" contenteditable="true" spellcheck="false">2007-2010</h5>
+                        <h4 class="editable" contenteditable="true" spellcheck="false">Bachelor Degree in Computer Science</h4>
+                        <h4 class="editable" contenteditable="true" spellcheck="false">Yale name</h4>
+                    </li>
+                    <li>
+                        <h5 class="editable" contenteditable="true" spellcheck="false">1997-2006</h5>
+                        <h4 class="editable" contenteditable="true" spellcheck="false">Matriculation (10th)</h4>
+                        <h4 class="editable" contenteditable="true" spellcheck="false">st.Joseph</h4>
+                    </li>
+                </ul>
+            </div>
+            <button onclick="addContent('.contactInfo.education ul')">Add Education</button>
+            <button onclick="deleteContent('.contactInfo.education ul')">Delete Education</button>
+
+
+
+            <div class="contactInfo language">
+                <h3 class="title editable" contenteditable="true" spellcheck="false">Languages</h3>
+                <ul>
+                    <li>
+                        <span class="text editable" contenteditable="true" spellcheck="false">English</span>
+                        <span class="percent editable" contenteditable="true" spellcheck="false">
+                            <div style="width: 90%" ,"class=" percent editable" contenteditable="true" spellcheck="false"></div>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="text editable" contenteditable="true" spellcheck="false">Spanish</span>
+                        <span class="percent editable" contenteditable="true" spellcheck="false"> <div style="width: 75%;"></div></span>
+
+                    </li>
+                    <li>
+                        <span class="text editable" contenteditable="true" spellcheck="false">Hindi</span>
+                        <span class="percent editable" contenteditable="true" spellcheck="false"><div style="width: 55%;"></div></span>
+
+                    </li>
+                </ul>
+            </div>
+            <button onclick="addContent('.contactInfo.language ul')">Add Language</button>
+            <button onclick="deleteContent('.contactInfo.language ul')">Delete Language</button>
+
+        </div>
+
+
+        <div class="right_side">
+            <div class="about">
+                <h2>PROFILE</h2>
+                <p class="editable" contenteditable="true" spellcheck="false">Enthusiastic marketing professional with 4 years of experience in digital marketing and campaign management. Proven track record of developing and implementing successful online marketing strategies that increased brand visibility and drove customer engagement.<br /><br> Adept at utilizing data analytics to optimize campaigns and achieve measurable results. Seeking a challenging role in a dynamic company where I can leverage my skills in digital marketing and contribute to the growth of the organization.</p>
+            </div>
+            <div class="about">
+                <h2 class="title2 editable" contenteditable="true" spellcheck="false">Experience</h2>
+                <div class="box">
+                    <div class="year_company">
+                        <h5 class="title2 editable" contenteditable="true" spellcheck="false">2019 - Present</h5>
+                        <h5 class="title2 editable" contenteditable="true" spellcheck="false">Google</h5>
+                    </div>
+                    <div class="text editable" contenteditable="true" spellcheck="false">
+                        <h4>Senior UX Designer</h4>
+                        <p>Improved promotion strategy and saved over +$800K in marketing support while still achieving sales goals.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="year_company">
+                        <h5 class="title2 editable" contenteditable="true" spellcheck="false">2016 - 2019</h5>
+                        <h5 class="title2 editable" contenteditable="true" spellcheck="false">Facebook</h5>
+                    </div>
+                    <div class="text editable" contenteditable="true" spellcheck="false">
+                        <h4>Junior UX Designer</h4>
+                        <p>Adhere to tight CPA and ROI goals and review performance of all campaigns on a daily basis.</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="year_company">
+                        <h5 class="title2 editable" contenteditable="true" spellcheck="false">2013 - 2016</h5>
+                        <h5 class="title2 editable" contenteditable="true" spellcheck="false">Oracle</h5>
+                    </div>
+                    <div class="text editable" contenteditable="true" spellcheck="false">
+                        <h4> UX Designer</h4>
+                        <p>Team liaison for the implementation of a new CRM system, salesforce.com.</p>
+                    </div>
+                </div>
+            </div>
+            <button onclick="addContent('.about.box.year_company.text')">Add Experience</button>
+            <button onclick="deleteContent('.about.experience .box')">Delete Experience</button>
+            <br />
+            <br />
+            <div class="about skills">
+                <h2 class="title2 editable" contenteditable="true" spellcheck="false">Professional Skills</h2>
+                <div class="box">
+                    <h4 class="editable" contenteditable="true" spellcheck="false">HTML</h4>
+                    <div class="percent editable" contenteditable="true" spellcheck="false">
+                        <div style="width: 95%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4 class="editable" contenteditable="true" spellcheck="false">CSS</h4>
+                    <div class="percent editable" contenteditable="true" spellcheck="false">
+                        <div style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4 class="editable" contenteditable="true" spellcheck="false">PYTHON</h4>
+                    <div class="percent editable" contenteditable="true" spellcheck="false">
+                        <div style="width: 75%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4 class="editable" contenteditable="true" spellcheck="false">ILLUSTRATOR</h4>
+                    <div class="percent editable" contenteditable="true" spellcheck="false">
+                        <div style="width: 85%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4 class="editable" contenteditable="true" spellcheck="false">React</h4>
+                    <div class="percent editable" contenteditable="true" spellcheck="false">
+                        <div style="width: 55%;"></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h4 class="editable" contenteditable="true" spellcheck="false">JAVA</h4>
+                    <div class="percent editable" contenteditable="true" spellcheck="false">
+                        <div style="width: 75%;"></div>
+                    </div>
+                </div>
+            </div>
+            <button onclick="addContent('.about.skills')">Add Skill</button>
+            <button onclick="deleteContent('.about.skills')">Delete Skill</button>
+            <br />
+            <br />
+            <div class="about interests">
+                <h2 class="title2 editable" contenteditable="true" spellcheck="false">Interests</h2>
+                <ul>
+                    <li class="editable" contenteditable="true" spellcheck="false">
+                        <i class='bx bxs-bowl-hot'></i>
+                        cooking
+                    </li>
+                    <li class="editable" contenteditable="true" spellcheck="false">
+                        <i class='bx bxs-book'></i>
+                        reading
+                    </li>
+                    <li class="editable" contenteditable="true" spellcheck="false">
+                        <i class='bx bx-child'></i>
+                        dancing
+                    </li>
+                    <li class="editable" contenteditable="true" spellcheck="false">
+                        <i class='bx bxs-speaker'></i>
+                        singing
+                    </li>
+                </ul>
+            </div>
+            <button onclick="addContent('.about.interests ul')">Add Interest</button>
+            <button onclick="deleteContent('.about.interests ul')">Delete Interest</button>
+
+            
+
+            <br /><br />
+            
+
+
+            <button class="download-pdf-btn" onclick="downloadPDF()">Download PDF</button>
+
+            <button class="toggle-preview" onclick="togglePreview()">Toggle Preview</button>
+            <button class="exit-preview" onclick="exitPreview()">Exit Preview</button>
+        </div>
+
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+        <script>
+            
+            function addContent(selector) {
+                var field = document.querySelector(selector);
+                var listItem = document.createElement("li");
+                listItem.innerHTML = '<li><span class="text editable" contenteditable="true" spellcheck="false">New Content</span><span class="percent editable" contenteditable="true" spellcheck="false"><div style="width: 50%;"></div></span></li>';
+                field.appendChild(listItem);
+            }
+
+            
+            function deleteContent(selector) {
+                var field = document.querySelector(selector);
+                if (field.lastElementChild) {
+                    field.removeChild(field.lastElementChild);
+                }
+            }
+
+
+
+            var toggleBtn = document.querySelector(".toggle-preview");
+            var exitBtn = document.querySelector(".exit-preview");
+
+            function togglePreview() {
+                document.body.classList.toggle('preview-mode');
+                toggleBtn.style.display = 'none';
+                exitBtn.style.display = 'block';
+                updatePreview();
+            }
+
+            function exitPreview() {
+                document.body.classList.remove('preview-mode');
+                toggleBtn.style.display = 'block';
+                exitBtn.style.display = 'none';
+            }
+
+            toggleBtn.onclick = () => {
+                togglePreview();
+            }
+
+            exitBtn.onclick = () => {
+                exitPreview();
+            }
+
+            function updatePreview() {
+                var resumeContent = document.getElementById('resumeContent').innerHTML;
+                document.getElementById('resumePreview').innerHTML = resumeContent;
+            }
+
+            
+            document.getElementById('resumeContent').addEventListener('input', updatePreview);
+
+           
+            function previewImage(event) {
+                var input = event.target;
+                var preview = document.getElementById('imagePreview');
+                var label = document.getElementById('imageLabel');
+                var file = input.files[0];
+
+                var reader = new FileReader();
+                reader.onload = function () {
+                    preview.src = reader.result;
+                }
+
+                reader.readAsDataURL(file);
+            }
+        </script>
+
+
+
+
+        <script>
+            
+            function toggleButtonsVisibility(display) {
+                var addButtons = document.querySelectorAll('button[onclick^="addContent"]');
+                var deleteButtons = document.querySelectorAll('button[onclick^="deleteContent"]');
+                addButtons.forEach(function (button) {
+                    button.style.display = display;
+                });
+                deleteButtons.forEach(function (button) {
+                    button.style.display = display;
+                });
+            }
+
+            function previewMode() {
+                
+                var editableElements = document.querySelectorAll('.editable');
+                editableElements.forEach(function (element) {
+                    element.setAttribute('contenteditable', 'false');
+                });
+
+                
+                toggleButtonsVisibility('none');
+
+               
+                var endPreviewButton = document.querySelector('button[onclick="endPreviewMode()"]');
+                endPreviewButton.style.display = 'inline-block';
+            }
+
+            function endPreviewMode() {
+                
+                var editableElements = document.querySelectorAll('.editable');
+                editableElements.forEach(function (element) {
+                    element.setAttribute('contenteditable', 'true');
+                });
+
+                
+                toggleButtonsVisibility('inline-block');
+
+                
+                var endPreviewButton = document.querySelector('button[onclick="endPreviewMode()"]');
+                endPreviewButton.style.display = 'none';
+            }
+
+            
+            window.addEventListener('beforeprint', function () {
+                
+                toggleButtonsVisibility('none');
+
+                
+                var editableElements = document.querySelectorAll('.editable');
+                editableElements.forEach(function (element) {
+                    element.setAttribute('contenteditable', 'false');
+                });
+            });
+
+            function previewImage(event) {
+                var input = event.target;
+                var preview = document.getElementById('imagePreview');
+                var label = document.getElementById('imageLabel');
+                var file = input.files[0];
+
+                var reader = new FileReader();
+                reader.onload = function () {
+                    preview.src = reader.result;
+                }
+
+                reader.readAsDataURL(file);
+            }
+
+            
+            window.addEventListener('afterprint', function () {
+
+
+                toggleButtonsVisibility('inline-block');
+
+                var editableElements = document.querySelectorAll('.editable');
+                editableElements.forEach(function (element) {
+                    element.setAttribute('contenteditable', 'true');
+                });
+            });
+            
+            function addContent(selector) {
+                var field = document.querySelector(selector);
+                var listItem = document.createElement("li");
+                listItem.innerHTML = '<h4 class="editable" contenteditable="true" spellcheck="false">New Skill</h4><div class="percent editable" contenteditable="true" spellcheck="false"><div style="width: 50%;"></div></div>';
+
+                
+                listItem.style.listStyleType = 'none';
+
+                field.appendChild(listItem);
+            }
+            function downloadPDF() {
+                const areaCV = document.querySelector('.container');
+
+                
+                const buttons = document.querySelectorAll('button');
+                buttons.forEach(button => {
+                    button.style.display = 'none';
+                });
+
+                window.scrollTo(0, 0);
+
+                html2canvas(areaCV, {
+                    scrollY: -window.scrollY,
+                    scale: 2,
+                    windowWidth: document.documentElement.offsetWidth,
+                    windowHeight: document.documentElement.offsetHeight,
+                    useCORS: true,
+                }).then(canvas => {
+                    const imgData = canvas.toDataURL('image/png');
+
+                    
+                    const pdfWidth = 210; 
+                    const pdfHeight = 297; 
+
+                    
+                    const pdf = new jsPDF('p', 'mm', [pdfWidth, pdfHeight]);
+
+                    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+                    pdf.save('resume.pdf');
+
+                    
+                    buttons.forEach(button => {
+                        button.style.display = 'inline-block';
+                    });
+
+                    alert('PDF Resume download started!');
+                });
+            }
+        </script>
+    </div>
+    
+</body>
+</html>

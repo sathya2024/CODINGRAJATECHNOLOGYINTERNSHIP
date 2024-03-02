@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cv2</title>
+
+    <link rel="stylesheet" href="styledesign4.css" />
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <style>
+
+
+        body.preview-mode .print-area {
+            width: 100%;
+            margin: 0;
+        }
+
+        body.preview-mode .left-area {
+            display: 30%;
+        }
+
+        body.preview-mode .right-area {
+            width: 70%;
+        }
+
+        body.preview-mode button.toggle-preview {
+            display: none;
+        }
+
+        body.preview-mode button.exit-preview {
+            display: block;
+        }
+
+        /* Styles for the preview mode */
+        /* ... (existing styles) ... */
+        @media print {
+            .toggle-preview, .exit-preview, .download-pdf-btn {
+                display: none !important;
+            }
+        }
+
+        [contenteditable="true"] {
+            border: none;
+            padding: 5px;
+            min-height: 20px;
+        }
+
+       
+    </style>
+
+</head>
+<body>
+    <div class="print-area" id="resumeContent">
+        <div class="header" contenteditable="true" id="area-cv">
+           
+           
+            <div class="header-text">
+                <h1 contenteditable="true">ARUN JOSHI</h1>
+                <p contenteditable="true">Marketting</p>
+            </div>
+        </div>
+        <div class="content">
+            <div class="left-area">
+                <div class="contact" contenteditable="true">
+                    <h1>CONTACT</h1>
+                    <h5>Phone</h5>
+                    <p>+91-6543210789</p>
+                    <h5>Email</h5>
+                    <p>arun@gmail.com</p>
+                    <h5>Home</h5>
+                    <p>Bengaluru , India</p>
+                </div>
+                <div class="skills" contenteditable="true">
+                    <h1>SKILLS</h1>
+                    <div class="bars">
+                        <div class="bar">
+                            <p>Photoshop</p>
+                            <span></span>
+                        </div>
+                        <div class="bar">
+                            <p>HTML/CSS</p>
+                            <span></span>
+                        </div>
+                        <div class="bar">
+                            <p>JavaScripr</p>
+                            <span></span>
+                        </div>
+                        <div class="bar">
+                            <p>PHP</p>
+                            <span></span>
+                        </div>
+                        <div class="bar">
+                            <p>SQL</p>
+                            <span></span>
+                        </div>
+                        <div class="bar">
+                            <p>C++</p>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="follow" contenteditable="true">
+                    <h1>FOLLOW ME</h1>
+                    <h4>Facebook</h4>
+                    <p>facebook.com/username</p>
+                    <h4>Instagram</h4>
+                    <p>Instagram.com/username</p>
+                    <h4>Twitter</h4>
+                    <p>Twitter.com/username</p>
+                    <h4>Youtube</h4>
+                    <p>Youtube.com/username</p>
+                </div>
+            </div>
+
+            <div class="right-area">
+                <div class="about" contenteditable="true">
+                    <h1><span><i class='bx bx-user'></i></span>ABOUT ME</h1>
+                    <p>
+                        Enthusiastic marketing professional with 4 years of experience in digital marketing and campaign management. Proven track record of developing and implementing successful online marketing strategies that increased brand visibility and drove customer engagement. Adept at utilizing data analytics to optimize campaigns and achieve measurable results. Seeking a challenging role in a dynamic company where I can leverage my skills in digital marketing and contribute to the growth of the organization.
+                    </p>
+                </div>
+                <div class="work" contenteditable="true">
+                    <h1><span><i class='bx bxs-briefcase'></i></span>WORK EXPERIENCE</h1>
+                    <div class="work-group">
+                        <h3>Head of Marketting</h3>
+                        <h4>ETC  America</h4>
+                        <span>2020/2024</span>
+                        <p>Directed and coordinated all public relations, fundraising, promotions, and special events efforts.</p>
+                    </div>
+                    <div class="work-group">
+                        <h3>Brand Manager</h3>
+                        <h4>JP Morgan</h4>
+                        <span>2016/2019</span>
+                        <p>Total $100MM marketing plan expected to generate 3:1 ROI.</p>
+                    </div>
+                    <div class="work-group">
+                        <h3>TATA Consultancy</h3>
+                        <h4>ETC College America</h4>
+                        <span>2013/2016</span>
+                        <p>Team liaison for the implementation of a new CRM system, salesforce.com.</p>
+                    </div>
+                </div>
+                <div class="education" contenteditable="true">
+                    <h1><span><i class='bx bxs-book'></i></span>EDUCATION</h1>
+                    <div class="edu-group">
+                        <h4>
+                            K S SCHOOL OF MANAGEMENT<br />
+                            GRADUATION SCHOOL OF BUSINESS
+                        </h4>
+                        <span>2010/2013</span>
+                        <p>MBA, Entrepreneurship Finance</p>
+                    </div>
+                    <div class="edu-group">
+                        <h4>
+                            K S INSTITUTE OF TECHNOLOGY<br />
+                            GRADUATION SCHOOL OF ENGINEERING
+                        </h4>
+                        <span>2006/2010</span>
+                        <p>MBA, Entrepreneurship Finance</p>
+                    </div>
+                    <div class="edu-group">
+                        <h4>
+                            P.E.S Institute of Technology<br />
+                            GRADUATION SCHOOL OF 12th
+                        </h4>
+                        <span>2004/2006</span>
+                        <p>MBA, Entrepreneurship Finance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <button class="toggle-preview" onclick="togglePreview()">Toggle Preview</button>
+        <button class="exit-preview" onclick="exitPreview()">Exit Preview</button>
+        <button class="download-pdf-btn" onclick="downloadPDF()">Download PDF</button>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+        <script>
+
+           
+
+            var btn = document.getElementById("downloadButton");
+            btn.onclick = function (event) {
+                event.preventDefault(); 
+                downloadPDF();
+            }
+
+        </script>
+
+        <script>
+            function togglePreview() {
+                var elements = document.querySelectorAll('[contenteditable="true"]');
+                elements.forEach(function (element) {
+                    element.classList.add('non-editable');
+                });
+
+                
+
+                document.body.classList.add('preview-mode');
+            }
+
+            function exitPreview() {
+                var elements = document.querySelectorAll('[contenteditable="true"]');
+                elements.forEach(function (element) {
+                    element.classList.remove('non-editable');
+                });
+
+                
+
+                document.body.classList.remove('preview-mode');
+            }
+        </script>
+        <script>
+            function downloadPDF() {
+                
+                document.querySelectorAll('.toggle-preview, .exit-preview, .download-pdf-btn')
+                    .forEach(function (button) {
+                        button.style.display = 'none';
+                    });
+
+                const templateArea = document.querySelector('.print-area');
+                window.scrollTo(0, 0);
+                html2canvas(templateArea, {
+                    scale: 2,
+                    windowWidth: document.documentElement.offsetWidth,
+                    windowHeight: document.documentElement.offsetHeight,
+                    useCORS: false,
+                }).then(canvas => {
+                    
+                    document.querySelectorAll('.toggle-preview, .exit-preview, .download-pdf-btn')
+                        .forEach(function (button) {
+                            button.style.display = '';
+                        });
+
+                    const imgData = canvas.toDataURL('image/png');
+
+                    const pdfWidth = 210;
+                    const pdfHeight = 297;
+
+                    const pdf = new jsPDF('p', 'mm', [pdfWidth, pdfHeight]);
+
+                    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+                    pdf.save('template.pdf');
+                    alert('PDF Template download started!');
+                });
+            }
+
+        </script>
+
+    </div>
+</body>
+</html>

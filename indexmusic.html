@@ -1,0 +1,445 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+    <title>Music Player Website</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.4/nouislider.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.4/nouislider.min.js"></script>
+   
+
+    <link rel="stylesheet" href="stylemusic.css" />
+</head>
+<body>
+
+    <audio src="C:\Users\sathy\Desktop\task2\requirements\songs\track1.mp3" id="audio-source"></audio>
+
+
+    <section class="home-section">
+
+        <div class="carousel">
+            <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic11.jpg" class="active" alt="pic1" />
+            <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic18.jpg" alt="pic2" />
+            <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic3.jpg" alt="pic3" />
+            <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic20.jpg" alt="pic4" />
+            <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic30.jpg" alt="pic5" />
+            <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic24.jpg" alt="pic6" />
+            <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic6.jpg" alt="pic7" />
+            <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic15.jpg" alt="pic8" />
+            <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic22.jpg" alt="pic9" />
+            <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic26.jpg" alt="pic10" />
+            <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic10.jpg" alt="pic11" />
+
+        </div>
+
+        <h1 class="heading">recently played</h1>
+        <div class="playlists-group">
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic2.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">mockingbird</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic4.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">heat waves</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic8.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">shape of you</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic10.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">middle of the night</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic12.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">dum masala</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic17.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">bekhayali</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic20.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">subhanallah</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic21.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">tere pyar mein</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic29.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">varaha roopam</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic30.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">odiyamma</p>
+            </div>
+        </div>
+        <h1 class="heading">based on your listening</h1>
+        <div class="playlists-group">
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic31.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">top international</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic32.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">bts collection</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic34.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">hollywood</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic33.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">top 50</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic35.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">all time classics</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic36.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">funcky trends</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic37.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">top 10</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic2.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">trending today</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic11.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">telugu party</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic12.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">mass masala</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic30.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">bollywood</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic25.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">top 100</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic29.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">kannadaclassics</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic21.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">love tunes</p>
+            </div>
+        </div>
+        <h1 class="heading">Chartbusters</h1>
+        <div class="playlists-group">
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic37.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">gym blast</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic3.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">hot hits</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic4.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">disco nights</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic2.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">music latte</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic9.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">music hangover</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic8.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">love mocktail</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic7.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">trendy mix</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic5.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">allan walker mix</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic33.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">top international today</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic3.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">new collection</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic4.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">vibing</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic2.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">top tunes</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic9.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">top chainsmokers</p>
+            </div>
+            <div class="playlist-card">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic8.jpg" alt="playlist-card-img" />
+                <p class="playlist-card-name">best of ed sheeran</p>
+            </div>
+        </div>
+    </section>
+    <section class="music-player-section ">
+        <img src="C:\Users\sathy\Desktop\task2\requirements\pics\arrow-back-regular-24.png" class="back-btn icon hide " alt="" />
+        <img src="C:\Users\sathy\Desktop\task2\requirements\pics\grid-alt-regular-24.png" class="nav-btn icon hide" alt="" />
+        <h1 class="current-song-name">song 1</h1>
+        <p class="artist-name hide">artist 1</p>
+        <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic1.jpg" class="cover hide" alt="" />
+
+        <div class="seek-bar-container">
+            <input type="range" class="music-seek-bar" value="0" />
+            <p class="current-time hide">00:00</p>
+            <p class="duration hide">00:00</p>
+        </div>
+        <div class="controls">
+            <span class='bx bx-shuffle '></span>
+            <span class='bx bx-repeat'></span>
+
+            <div class="main">
+                <i class='bx bx-first-page active'></i>
+                <i class='bx bx-play-circle active'></i>
+                <i class='bx bx-pause'></i>
+                <i class='bx bx-last-page active'></i>
+
+            </div>
+
+            <input type="range" class="volume-slider" max="1" value="1" step="0.1" />
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.0/rangeslider.min.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    var volumeSlider = document.querySelector('.volume-slider');
+                    rangeslider.create(volumeSlider, {
+                        orientation: 'vertical'
+                    });
+                });
+            </script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var volumeSlider = document.getElementById('volume-slider');
+
+                    noUiSlider.create(volumeSlider, {
+                        start: 50,  // Initial value
+                        orientation: 'vertical',
+                        range: {
+                            'min': 0,
+                            'max': 100
+                        },
+                        cssPrefix: 'your-slider',
+                    });
+                });
+            </script>
+
+            <span class='bx bx-volume-full '></span>
+        </div>
+    </section>
+    <section class="playlist">
+        <img src="C:\Users\sathy\Desktop\task2\requirements\pics\arrow-back-regular-24.png" class="back-btn icon" alt="" />
+        <h1 class="title">playlist</h1>
+        <div class="queue ">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic1.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">under the influence</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic2.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">mockingbird</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic3.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">industry baby</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic4.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">heat waves</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic5.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">faded</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic6.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">no lie</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic7.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">unstoppable</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic8.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">shape of you</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic9.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">closer</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic10.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">middle of the night</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic11.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">kurchi madathapetti</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic12.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">dum masala</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic13.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">sound of salaar</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic14.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">naatu naatu</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic15.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">oh antava mava</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic16.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">heeriye</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic17.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">bekhayali</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic18.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">deva deva</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic19.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">kesariya</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic20.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">subhanallah</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic21.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">tere pyar mein</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic22.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">arjan vailly</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic23.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">bombe helutaithe</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic24.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">kaagadada doniyalli</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic25.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">salaam rocky bhai</p>
+        </div>
+        <div class="queue">
+            <div class="queue-cover">
+                <img src="C:\Users\sathy\Desktop\task2\requirements\pics\pic26.jpg" alt="" />
+                <i class='bx bx-pause'></i>
+            </div>
+            <p class="name">garbadhi</p>
+        </div>
+       
+        
+       
+
+    </section>
+    <script src="app1.js"></script>
+</body>
+</html>

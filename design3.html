@@ -1,0 +1,328 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Resume website html css</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styledesign3.css">
+    <style>
+
+        .header {
+            position: relative;
+        }
+
+
+        body.preview-mode .print-area {
+            width: 100%;
+            margin: 0;
+        }
+
+        body.preview-mode .left-area {
+            display: 30%;
+        }
+
+        body.preview-mode .right-area {
+            width: 70%;
+        }
+
+        body.preview-mode button.toggle-preview {
+            display: none;
+        }
+
+        body.preview-mode button.exit-preview {
+            display: grid;
+        }
+
+        @media print {
+            .toggle-preview, .exit-preview, button {
+                display: none !important;
+            }
+        }
+
+        [contenteditable="true"] {
+            border: none;
+            padding: 5px;
+            min-height: 20px;
+        }
+
+        #uploadImage {
+            display: none;
+        }
+
+        #imagePreview {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .download-pdf-btn {
+            padding: 10px;
+            background-color: #00b6c4;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #607d8b;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+            button.print-cv-btn,
+            button.toggle-preview-btn,
+            button.enable-editing-btn,
+            button.exit-preview-btn {
+                padding: 10px;
+                background-color: #607d8b;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+                margin-top: 10px;
+                border-radius: 5px;
+            }
+
+           
+            button.print-cv-btn {
+                background-color: #00b6c4;
+                position: fixed;
+                top: 80px;
+                right: 10px;
+            }
+
+           
+            button.toggle-preview-btn {
+                background-color: #00b6c4;
+                position: fixed;
+                top: 160px;
+                right: 10px;
+            }
+
+           
+            button.enable-editing-btn {
+                background-color: #00b6c4;
+                position: fixed;
+                top: 220px;
+                right: 10px;
+            }
+
+            
+            button.exit-preview-btn {
+                background-color: #00b6c4;
+                position: fixed;
+                top: 300px;
+                right: 10px;
+            }
+
+       
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+       
+        <div class="header">
+
+            <label for="uploadImage" id="imageLabel">
+                <img id="imagePreview" src="img1.jpg" />
+            </label>
+            <input type="file" id="uploadImage" accept="image/*" onchange="previewImage(event)">
+            <h1 contenteditable="true">Alexandra Smith</h1>
+            <h3 contenteditable="true">Full-Stack Web Developer</h3>
+        </div>
+       
+        <div class="main">
+            <div class="left" contenteditable="true">
+               
+                <h2>Personal Information</h2>
+                <p><strong>Name:</strong>Alexandra Smith </p>
+                <p><strong>Age:</strong> 23</p>
+                <p><strong>Email:</strong> alexsmith@email.com</p>
+                <p><strong>Phone:</strong> 234 432 5678</p>
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>SQL</li>
+                </ul>
+                <h2>Education</h2>
+                <h3>B.Sc in Computer Science</h3>
+                <p>University of Cambodia, 2014-2018</p> <br>
+                <h3>M.Sc in Computer Science</h3>
+                <p>University of Oxford, 2019-2020</p>
+                <h2>Languages</h2>
+
+                <ul>
+                    <li>English</li>
+                    <li>German</li>
+                    <li>French</li>
+                    <li>Japanese</li>
+                    <li>Mandrin</li>
+                    <li>Urdu</li>
+                </ul>
+
+            </div>
+
+            <div class="right" contenteditable="true">
+                
+                <h2>Work Experience</h2>
+                <h3>Cognizant Company</h3>
+                <p><strong>Position:</strong> Software Developer</p>
+                <p><strong>Duration:</strong> 2021-2022</p>
+                <p>Developed and maintained web applications using React, Node.js, and SQL</p>
+
+                <br>
+                <h3>Oracle Company</h3>
+                <p><strong>Position:</strong> Web Developer</p>
+                <p><strong>Duration:</strong> 2022-2023</p>
+                <p>Developed and maintained database for Formula1</p>
+                <h2>Interests</h2>
+                <ul>
+                    <li>Hiking</li>
+                    <li>Swimming</li>
+                    <li>Reading</li>
+                    <li>Racing</li>
+                    <li>Soccer</li>
+
+                </ul>
+
+                <h2>References</h2>
+                <ul>
+                    <li>
+                        <h3>Mr.Mike</h3>
+                        <p><strong>Cognizant / ceo</strong></p>
+                        <p>123 456 7809 / mike@gmail.com</p>
+
+                    </li>
+                    <li>
+                        <h3>Mr.Christian</h3>
+                        <p><strong>Oracle / Head Developer</strong></p>
+                        <p>+91-1234567890 / christian@gmail.com
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <button class="print-cv-btn">Print CV</button>
+        <button class="toggle-preview-btn" onclick="togglePreviewMode()">Toggle Preview Mode</button>
+        <button class="enable-editing-btn" onclick="enableEditing()">Enable Editing</button>
+        <button class="exit-preview-btn" onclick="exitPreviewMode()">Exit Preview</button>
+        <button class="download-pdf-btn" onclick="downloadPDF()">Download PDF</button>
+
+
+        
+       
+    </div>
+
+     
+
+    
+    <script>
+        var btn = document.querySelector("button");
+        btn.onclick = () => {
+            window.print();
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+
+    <script>
+        
+        function togglePreviewMode() {
+            const body = document.body;
+            body.classList.toggle('preview-mode');
+
+            if (body.classList.contains('preview-mode')) {
+                disableEditing();
+            }
+        }
+
+        function enableEditing() {
+            const editableElements = document.querySelectorAll('[contenteditable]');
+            editableElements.forEach((element) => {
+                element.setAttribute('contenteditable', 'true');
+            });
+        }
+
+        function disableEditing() {
+            const editableElements = document.querySelectorAll('[contenteditable]');
+            editableElements.forEach((element) => {
+                element.setAttribute('contenteditable', 'false');
+            });
+        }
+
+        function exitPreviewMode() {
+            const body = document.body;
+            body.classList.remove('preview-mode');
+            enableEditing();
+        }
+
+
+
+        function previewImage(event) {
+            var input = event.target;
+            var preview = document.getElementById('imagePreview');
+            var label = document.getElementById('imageLabel');
+            var file = input.files[0];
+
+            var reader = new FileReader();
+            reader.onload = function () {
+                preview.src = reader.result;
+            }
+
+            reader.readAsDataURL(file);
+        }
+
+
+        function downloadPDF() {
+            const areaCV = document.querySelector('.container');
+            const fullHeight = areaCV.scrollHeight;
+
+            window.scrollTo(0, 0);
+
+            html2canvas(areaCV, {
+                scrollY: -window.scrollY,
+                scale: 2,
+                windowWidth: document.documentElement.offsetWidth,
+                windowHeight: document.documentElement.offsetHeight,
+                useCORS: true,
+            }).then(canvas => {
+                const imgData = canvas.toDataURL('image/png');
+
+                
+                const pdfWidth = 210; 
+                const pdfHeight = 297; 
+
+                
+                const pdf = new jsPDF('p', 'mm', [pdfWidth, pdfHeight]);
+
+                pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+                pdf.save('resume.pdf');
+                alert('PDF Resume download started!');
+            });
+        }
+
+    </script>
+</body>
+</html>
+
